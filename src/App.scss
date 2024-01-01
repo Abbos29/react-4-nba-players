@@ -27,8 +27,35 @@ nav {
     padding: 20px 0;
 }
 
-.logo {
-    max-width: 100px;
-    display: block;
-    margin: 0 auto;
+
+.wrap {
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px 20px;
+
+    // filter: drop-shadow(1px 1px 10px black);
+
+    @media (max-width: 768px) {
+        grid-template-columns: 1fr 1fr;
+    }
+    @media (max-width: 480px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+
+
+
+.select {
+    border: 2px solid lightgray;
+    padding: 2px 6px;
+    font-weight: 500;
+    font-size: 18px;
+
+    option {
+        padding: 4px;
+    }
 }

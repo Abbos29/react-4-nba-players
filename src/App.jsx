@@ -1,14 +1,25 @@
 import React from 'react'
 import './App.scss'
+import { Route, Routes } from 'react-router-dom'
+
 import Header from './components/Header/Header'
-import CatalogList from './components/CatalogList/CatalogList'
+
+import Home from './pages/Home'
+import Top from './pages/Top'
+import Teams from './pages/Teams'
 
 
 const App = () => {
   return (
     <>
       <Header />
-      <CatalogList />
+
+      <Routes>
+        <Route path='/' element={<Home />} />
+        <Route path='/top' element={<Top />} />
+        <Route path='/teams' element={<Teams />} />
+
+      </Routes>
 
     </>
   )

@@ -1,7 +1,7 @@
 // import React from 'react'
 
 import './CatalogList.scss'
-import CatalogItem from '../CatalogItem/CatalogItem';
+import Item from '../Item/Item';
 
 const CatalogList = () => {
 
@@ -264,12 +264,12 @@ const CatalogList = () => {
     return (
         <section className="catalog">
             <div className="container">
-                <h2 className="section-title">Nba Players</h2>
+                <h2 className="section-title">Top Players</h2>
 
-                <div className="catalog__wrapper">
+                <div className="catalog__wrapper wrap">
 
                     {nbaPlayers.map((item) => (
-                        <CatalogItem props={item} key={item.id} />
+                        <Item props={item} key={item.id} />
                     ))}
 
 

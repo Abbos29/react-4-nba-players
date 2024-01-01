@@ -1,7 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
-const CatalogItem = ({ props }) => {
+import './Item.scss'
+
+const Item = ({ props }) => {
     return (
 
         <div className="item" style={{ backgroundColor: `${props.teamColor}`, filter: `drop-shadow(1px 1px 8px ${props.teamColor})` }} key={props.id}>
@@ -35,7 +37,7 @@ const CatalogItem = ({ props }) => {
 }
 
 
-CatalogItem.propTypes = {
+Item.propTypes = {
     id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     team: PropTypes.string.isRequired,
@@ -48,4 +50,4 @@ CatalogItem.propTypes = {
     teamColor: PropTypes.string.isRequired,
 };
 
-export default CatalogItem
+export default Item
