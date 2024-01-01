@@ -58,3 +58,28 @@
         align-self: center;
     }
 }
+
+
+
+.admin-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 400px;
+    width: 100%;
+    margin: 30px auto;
+
+    background-color: #fff;
+    padding: 10px;
+}
+
+input {
+    padding: 5px;
+    background-color: rgb(228, 228, 228);
+}
+
+button {
+    padding: 5px;
+    background-color: lightblue;
+    margin-top: 5px;
+}
