@@ -18,6 +18,10 @@ nav {
     max-width: 100px;
     margin-right: auto;
 
+    @media (max-width: 480px) {
+        max-width: 60px;
+    }
+
     img {
         width: 100%;
     }
