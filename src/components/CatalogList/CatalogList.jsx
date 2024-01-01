@@ -1,5 +1,7 @@
 // import React from 'react'
+
 import './CatalogList.scss'
+import CatalogItem from '../CatalogItem/CatalogItem';
 
 const CatalogList = () => {
 
@@ -259,10 +261,6 @@ const CatalogList = () => {
     ];
 
 
-
-
-
-
     return (
         <section className="catalog">
             <div className="container">
@@ -271,33 +269,7 @@ const CatalogList = () => {
                 <div className="catalog__wrapper">
 
                     {nbaPlayers.map((item) => (
-                        <div className="item" style={{ backgroundColor: `${item.teamColor}`, filter: `drop-shadow(1px 1px 8px ${item.teamColor})` }} key={item.id}>
-                            <div className="item__box">
-                                <img className="item__img" src={item.imageUrl} alt="" style={{ filter: `drop-shadow(1px 1px 20px ${item.teamColor})` }} />
-                                <img className="item__logo" src={item.logoUrl} alt="" style={{ filter: `drop-shadow(1px 1px 6px ${item.teamColor})` }} />
-                                <div className="item__info" >
-                                    <h4 className="item__name" style={{ borderColor: `${item.teamColor}` }}>{item.name}</h4>
-                                    <h3 className="item__team" style={{ borderColor: `${item.teamColor}` }}>{item.team}</h3>
-
-                                    <div className="item__inner" style={{ borderColor: `${item.teamColor}` }}>
-                                        <div className="item__per" style={{ borderColor: `${item.teamColor}` }}>
-                                            <p className="item__per-name">PPG</p>
-                                            <p className="item__per-stat">{item.pointsPerGame}</p>
-                                        </div>
-
-                                        <div className="item__per" style={{ borderColor: `${item.teamColor}` }}>
-                                            <p className="item__per-name">RPG</p>
-                                            <p className="item__per-stat">{item.reboundsPerGame}</p>
-                                        </div>
-
-                                        <div className="item__per" style={{ borderColor: `${item.teamColor}` }}>
-                                            <p className="item__per-name">APG</p>
-                                            <p className="item__per-stat">{item.assistsPerGame}</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        <CatalogItem props={item} key={item.id} />
                     ))}
 
 
