@@ -18,16 +18,23 @@
         border-radius: 12px;
         background-color: #fff;
         overflow: hidden;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
     }
     /* .item__img */
     &__img {
         overflow: hidden;
-        transition: all 0.3s;
+        transition: all 0.3s !important;
         width: 100%;
         max-width: 400px;
         display: block;
         margin: 0 auto;
         padding-top: 40px;
+
+        scale: 1.05;
     }
 
     &__logo {
@@ -94,4 +101,5 @@
         color: crimson;
         font-size: 22px;
     }
+
 }

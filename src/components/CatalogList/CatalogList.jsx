@@ -3,6 +3,7 @@
 import './CatalogList.scss'
 import Item from '../Item/Item';
 
+
 const CatalogList = () => {
 
     const nbaPlayers = [

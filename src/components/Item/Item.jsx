@@ -1,6 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types';
 
+import { LazyLoadImage } from 'react-lazy-load-image-component'
+import 'react-lazy-load-image-component/src/effects/blur.css';
+
 import './Item.scss'
 
 const Item = ({ props }) => {
@@ -8,7 +11,15 @@ const Item = ({ props }) => {
 
         <div className="item" style={{ backgroundColor: `${props.teamColor}`, filter: `drop-shadow(1px 1px 8px ${props.teamColor})` }} key={props.id}>
             <div className="item__box">
-                <img className="item__img" src={props.imageUrl} alt="" style={{ filter: `drop-shadow(1px 1px 20px ${props.teamColor})` }} />
+                <div className="item__lazy">
+                    <LazyLoadImage
+                        effect='blur'
+
+                        className="item__img"
+                        src={props.imageUrl} alt=""
+                        style={{ filter: `drop-shadow(1px 1px 20px ${props.teamColor})` }}
+                    />
+                </div>
                 <img className="item__logo" src={props.logoUrl} alt="" style={{ filter: `drop-shadow(1px 1px 6px ${props.teamColor})` }} />
                 <div className="item__info" >
                     <h4 className="item__name" style={{ borderColor: `${props.teamColor}` }}>{props.name}</h4>
