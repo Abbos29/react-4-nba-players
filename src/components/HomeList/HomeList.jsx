@@ -55,12 +55,13 @@ const HomeList = () => {
         },
     ];
 
-    
+
 
     return (
         <section className="home">
             <div className="container">
                 <h2 className="section-title">BEST OF 2023</h2>
+
 
                 <div className="home__wrapper wrap">
 

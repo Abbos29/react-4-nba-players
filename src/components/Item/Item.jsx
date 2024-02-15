@@ -13,7 +13,7 @@ const Item = ({ props }) => {
             <div className="item__box">
                 <div className="item__lazy">
                     <LazyLoadImage
-                        effect='blur'
+                        // effect='blur'
 
                         className="item__img"
                         src={props.imageUrl} alt=""

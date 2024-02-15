@@ -14,7 +14,7 @@ const HomeItem = ({ props }) => {
                 <div className="home__img">
                     <LazyLoadImage
 
-                        effect="blur"
+                        // effect="blur"
 
                         className='home__preview'
                         src={props.preview}

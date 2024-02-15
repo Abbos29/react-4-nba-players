@@ -1,10 +1,22 @@
-// import React from 'react'
+import React, { useState } from 'react'
 
 import './CatalogList.scss'
 import Item from '../Item/Item';
+// import { useState } from 'react';
 
 
 const CatalogList = () => {
+
+    const [searchTerm, setSearchTerm] = useState('')
+    const [searchResults, setSearchResults] = useState([])
+
+    const handleChange = (event) => {
+        setSearchTerm(event.target.value)
+
+        const filteredResults = nbaPlayers.filter((player) =>
+            player.name.toLowerCase().includes(event.target.value.toLowerCase()))
+        setSearchResults(filteredResults)
+    }
 
     const nbaPlayers = [
         {
@@ -266,6 +278,22 @@ const CatalogList = () => {
         <section className="catalog">
             <div className="container">
                 <h2 className="section-title">Top Players</h2>
+
+                <div className="search">
+                    <input type="text" value={searchTerm} onChange={handleChange} />
+
+                    <div className={`search__list ${searchTerm ? 'active' : ''}`}>
+                        {searchResults.map((player) => (
+                            <div className="search__item" key={player.id}>
+                                <img src={player.imageUrl} alt="img" />
+                                <p>{player.name}</p>
+                                <b>{player.team}</b>
+                            </div>
+                        ))}
+
+                    </div>
+
+                </div>
 
                 <div className="catalog__wrapper wrap">
 
